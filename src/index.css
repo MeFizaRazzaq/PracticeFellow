@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Override the primary color */
+.bg-primary {
+  background-color: #111c43 !important; /* Purple */
+}
+
+.menue-text {
+  color: #a3aed1 !important;
+}
+
+.icon{
+  color: aliceblue;
+}
+
+.dark{
+  color: #111c43;
+}
+
+.m{
+  padding-left: 5%;
+}
+
+
+
+/* CSS */
+.hovoff {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 17%;
+  margin-bottom: 15px;
+}
+
+.hovoff:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.hovoff:active{
+  color: rgb(128, 30, 0);
+  background-color: #fbd2c2;
+  box-shadow: rgba(128, 30, 0, .2) 0 -25px 18px -14px inset,rgba(128, 30, 0, .15) 0 1px 2px,rgba(128, 30, 0, .15) 0 2px 4px,rgba(128, 30, 0, .15) 0 4px 8px,rgba(128, 30, 0, .15) 0 8px 16px,rgba(128, 30, 0, .15) 0 16px 32px;
+}
+
+.hovoffred{
+  color: rgb(128, 30, 0);
+  background-color: #fbd2c2;
+  box-shadow: rgba(128, 30, 0, .2) 0 -25px 18px -14px inset,rgba(128, 30, 0, .15) 0 1px 2px,rgba(128, 30, 0, .15) 0 2px 4px,rgba(128, 30, 0, .15) 0 4px 8px,rgba(128, 30, 0, .15) 0 8px 16px,rgba(128, 30, 0, .15) 0 16px 32px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+#sidebar {
+    max-width: 220px;
+    max-height: 100vh;
+    transition: all 0.35s ease-in-out;
+    background-color: #111c43;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top:0;
+    font-family: 'Montserrat', sans-serif ;
+}
+
+
+#sidebar.collapsed {
+    margin-left: -240px;
+}
+
+.toggler-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+.toggler-btn i {
+    font-size: 1.75rem;
+    color: #111c43;
+    font-weight: 1000;
+}
+
+.navbar {
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: #ffffff;
+    max-height: 60px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.main-content{
+  margin-top: 50px;
+}
+.sidebar-nav {
+    flex: 1 1 auto;
+}
+
+.round{
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar-logo {
+    padding: 8px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.sidebar-logo a {
+    color: rgb(163, 174, 209);
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.sidebar-header {
+    color: rgb(163, 174, 209);
+    font-size: 9.6px;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: rgb(163, 174, 209);
+    position: relative;
+    transition: all 0.35s;
+    display: block;
+    font-size: 13.6px bold;
+}
+
+a.sidebar-link:hover {
+    background-color: #ffffff0d;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #f9f9f9;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+i{
+  margin-right: 5px;
+}
+
+/* Screen size less than 768px */
+
+@media (max-width:768px) {
+
+    .sidebar-toggle {
+        margin-left: -240px;
+    }
+
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+}
+
+
+
+.name{
+  color: rgb(83, 100, 133);
+  font-family: 'Inter', sans-serif;
+  font-size: 13.8px;
+  font-weight: 600;
+  line-height: 13.8px;
+  margin: 0;
+  padding: 0;
+  tab-size: 4;
+}
+
+.role{
+  color:rgb(83, 100, 133) ;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16.5px;
+  margin: 0;
+  padding: 0;
+  tab-size: 4;
+}
+
+.btn-primary{
+  background-color: rgb(132, 90, 223);
+  border: rgb(132, 90, 223);
+}
+
+.btn-primary:hover{
+  background-color: rgb(99, 55, 194);
+  border: rgb(132, 90, 223);
+}
+
+.btn-primary:active{
+  background-color: rgb(72, 35, 151) !important;
+  border: rgb(132, 90, 223);
+}
+
+.form-check-input{
+  margin-right: 12px;
+}
+
+.form-check-input.input-group-text.form-control:checked{
+  background-color: rgb(132, 90, 223);
+  border: 5px solid rgb(132, 90, 223);
+  box-shadow: 0 0 0 .25rem rgba(132, 90, 223, 0.253);
+  
+}
+
+.form-control:focus{
+  box-shadow: 0 0 0 .25rem rgba(132, 90, 223, 0.253);
+  border: 0.01rem solid rgb(132, 90, 223);
+}
+.form-control:active{
+  box-shadow: 0 0 0 .25rem rgba(132, 90, 223, 0.253);
+  border: 0.1rem solid rgb(132, 90, 223);
+}
+
+.input-group.input-group-text.form-control{
+  box-shadow: 0 0 0 .25rem rgba(132, 90, 223, 0.253);
+  border: 0.01rem solid rgb(132, 90, 223);
+}
+
+.payer-section{
+  border: 0.1rem solid rgb(132, 90, 223);
+  border-radius: 12px;
+}
+
+.b2{
+  margin-top: 33px;
+  align-self: left;
+}

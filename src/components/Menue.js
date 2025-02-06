@@ -74,10 +74,12 @@ export default function Menue(props) {
             data-bs-parent="#sidebar"
           >
             <li className="sidebar-item">
-              
+              <Link to="/Addpatientform">
               {props.isOpen && <a href="#" className="sidebar-link"><i className="bx bx-radio-circle"></i>Add Patient</a>}
               {(!props.isOpen) &&<li className="sidebar-header"><i className="bx bx-radio-circle"></i></li>}
-            </li>
+            
+              </Link>
+              </li>
             <li className="sidebar-item">
               {props.isOpen && <a href="#" className="sidebar-link"><i className=" bx bx-radio-circle "></i>Register</a>}
               {(!props.isOpen) &&<li className="sidebar-header"><i className="bx bx-radio-circle"></i></li>}
@@ -115,34 +117,3 @@ export default function Menue(props) {
 }
 
 
-
-    /*
-      <div
-      className={`bg-primary menue-text border-end side-menu  position-fixed ${props.isOpen ? 'show' : ''}`}
-      style={{
-        width: props.isOpen ? '200px' : '70px',
-        transition: 'width 0.3s',
-        height: '100vh',
-      }}
-    >
-      <div className='menue-head p-2 pt-3 ps-3 mx-auto'>
-        {!(props.isOpen) && <h5 className='mx-auto'>AMS</h5>}
-        {props.isOpen && <h5 className='mx-auto'>All Med Solutions</h5>}
-        
-      </div>
-      <ul className="list-unstyled p-2 mx-2">
-        <li className="pb-3 mx-auto">
-        <i class="bx bx-home bx-sm"></i> 
-        {props.isOpen && <span className="ms-2">Dashoard</span>}
-        </li>
-        <li className="mb-3">
-          <i className="bx bx-file-blank bx-sm"></i>
-          {props.isOpen && <span className="ms-2">Pages</span>}
-        </li>
-        <li className="mb-3">
-          <i className="bx bx-task bx-sm"></i>
-          {props.isOpen && <span className="ms-2">Tasks</span>}
-        </li>
-      </ul>
-    </div>
-      */

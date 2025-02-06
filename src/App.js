@@ -11,7 +11,7 @@ function App() {
   //let [productList, setProductList] = useState(product);
   const [isOpen, setIsOpen]=useState(true);
   const [hovToggle, setHovToggle] = useState(false);
-  const [activeComponent, setActiveComponent] = useState("Main");
+  const [formState, setformState] = useState("Other");
 
 
   // Function to toggle the sidebar manually (disable hover effect)
@@ -30,7 +30,8 @@ function App() {
           <div className='main-content'>
           <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/Addpatientform" element={<Addpatientform />} />
+              <Route path="/Addpatientform" element={<Addpatientform formState={formState} setformState={setformState} 
+              />} />
             </Routes>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function Addpatientform() {
+export default function Addpatientform(props) {
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -55,28 +57,33 @@ export default function Addpatientform() {
       </h3>
       <h5>Patient Information</h5>
       {/* Primary Policy Holder */}
-      <div className="col-xl-12 mb-3">
+      
+        <div className="col-xl-12 mb-3">
         <div className="row">
           <label className="form-label mb-1">Primary Policy Holder</label>
           <div className="col-lg-3">
-            <input className="form-check-input" type="radio" name="policyHolder" value="Client" id="client" />
-            <label className="form-check-label" htmlFor="client">Client</label>
+            <input className="form-check-input" type="radio" name="policyHolder" value="Client" id="client" onClick={()=>{props.setformState("Client") }} />
+            <label className="form-check-label" htmlFor="client" >Client</label>
           </div>
           <div className="col-lg-3">
-            <input className="form-check-input" type="radio" name="policyHolder" value="Client Spouse" id="clientSpouse" />
+            <input className="form-check-input" type="radio" name="policyHolder" value="Client Spouse" id="clientSpouse" onClick={()=>{props.setformState("Other") }} />
             <label className="form-check-label" htmlFor="clientSpouse">Client's Spouse</label>
           </div>
           <div className="col-lg-3">
-            <input className="form-check-input" type="radio" name="policyHolder" value="Client Parent" id="clientParent" />
+            <input className="form-check-input" type="radio" name="policyHolder" value="Client Parent" id="clientParent" onClick={()=>{props.setformState("Other") }} />
             <label className="form-check-label" htmlFor="clientParent">Client's Parent</label>
           </div>
           <div className="col-lg-3">
-            <input className="form-check-input" type="radio" name="policyHolder" value="Other" id="otherPolicy" />
+            <input className="form-check-input" type="radio" name="policyHolder" value="Other" id="otherPolicy" onClick={()=>{props.setformState("Other") }} />
             <label className="form-check-label" htmlFor="otherPolicy">Other</label>
           </div>
         </div>
       </div>
-
+      
+      
+    {props.formState !== "Client" &&(
+      <div className='row'>
+        
       {/* Personal Information */}
       <div className="col-md-4 mb-3">
         <label className="form-label">First Name</label>
@@ -149,12 +156,12 @@ export default function Addpatientform() {
       </div>
       <div className="col-lg-4">
         <label className="form-label">City</label>
-        <input type="text" name="city" className="form-control" placeholder="First name" required />
+        <input type="text" name="city" className="form-control" placeholder="City " required />
       </div>
       <div className="col-lg-4 mb-3">
         <label className="form-label">State</label>
         <select name="state" className="form-select">
-          <option value="" disabled selected>--none selected--</option>
+          <option value="" disabled selected>none selected</option>
           <option value="p1">s1</option>
           <option value="p2">s2</option>
           <option value="p3">s3</option>
@@ -170,16 +177,16 @@ export default function Addpatientform() {
       <div className='row'>
       <div className="col-md-12 mb-2">
         <label className="form-label"> Other Adress (Optional)</label>
-        <input type="text" name="otheradress" className="form-control" placeholder="Adress" required />
+        <input type="text" name="otheradress" className="form-control" placeholder="Adress"  />
       </div>
       <div className="col-lg-4">
         <label className="form-label">City</label>
-        <input type="text" name="City2" className="form-control" placeholder="First name" required />
+        <input type="text" name="City2" className="form-control" placeholder="City "  />
       </div>
       <div className="col-lg-4 mb-3">
         <label className="form-label">State</label>
         <select name="state2" className="form-select">
-          <option value="" disabled selected>--none selected--</option>
+          <option value="" disabled selected>none selected</option>
           <option value="p1">s1</option>
           <option value="p2">s2</option>
           <option value="p3">s3</option>
@@ -192,15 +199,16 @@ export default function Addpatientform() {
       </div>
       </div>
       </div>
-     
+      </div>
+    )} 
       <div id='payerContainer'>
-      <div className='row payer-section mt-2 mb-2 pt-2 pb-2' id='payerSection'>
+      <div className='row payer-section mt-2 mb-3 me-2 p-4' id='payerSection'>
               {/* Payer */}
       <div className="col-md-12 mb-3 " >
         <h5><b>Payer Information</b></h5>
         <label className="form-label">Payer</label>
         <select name="payer" className="form-select">
-          <option value="" disabled selected>--none selected--</option>
+          <option value="" disabled selected>none selected</option>
           <option value="p1">Payer1</option>
           <option value="p2">Payer2</option>
           <option value="p3">Payer3</option>

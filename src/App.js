@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Menue from './components/Menue';
 import Main from './components/Main';
 import Addpatientform from './components/Addpatientform';
+import Patientdashboard from './components/Patientdashboard';
 import React,{useState} from 'react';
 import {Router, Routes, Route } from "react-router-dom";
 
@@ -32,6 +33,7 @@ function App() {
               <Route path="/" element={<Main />} />
               <Route path="/Addpatientform" element={<Addpatientform formState={formState} setformState={setformState} 
               />} />
+              <Route path="/Patientdashboard" element={<Patientdashboard />} />
             </Routes>
           </div>
         </div>

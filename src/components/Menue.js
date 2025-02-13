@@ -48,7 +48,7 @@ export default function Menue(props) {
         </li>
 
         <li className="sidebar-item">
-        <Link to="/Addpatientform" className="sidebar-link">
+        <Link to="/Patientdashboard" className="sidebar-link">
           <i className="bx bx-user"></i>
           {props.isOpen && <span>Patient</span>}
         </Link>
